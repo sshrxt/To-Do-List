@@ -59,15 +59,14 @@ body {
     height: 100vh;
     color: white;
     fill: white;
-    overflow: hidden;
+    overflow: auto;
 }
 
 
 .sidebar {
-    height: 100vh;
     background-color: rgb(37, 37, 37);
     width: 20vw;
-    min-width: 250px;
+    min-width: 400px;
     box-sizing: border-box; 
     overflow: auto; 
     display: flex;
@@ -75,6 +74,17 @@ body {
     align-items: center;
     gap: 40px;
     overflow-x: hidden;
+    position: fixed; /* Make the sidebar fixed */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align it to the left side */
+    height: 100vh;
+}
+
+.main-content {
+    margin-left: 20vw; 
+    padding: 20px; 
+    min-width: calc(100% - 20vw); 
+    box-sizing: border-box;
 }
 
 .sidebar-logo {
@@ -178,7 +188,7 @@ body {
 
 .project-add{
     width: 100%;
-    margin-left: 50px;
+    margin-left: 80px;
 }
 
 .rotated {
@@ -218,4 +228,164 @@ body {
 
 
 
-/*--------------------------------main content --------------------------------*/
+/*--------------------------------inbox content --------------------------------*/
+.main-content {
+    width: 100%;
+}
+
+.inbox-content {
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.inbox-header{
+    text-align: center;
+    font-size: 3.6rem;
+    font-family: "LXGW WenKai Mono TC", monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.inbox-recent {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+.inbox-heading {
+    width: 100%;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    font-family: "LXGW WenKai Mono TC", monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.add-task {
+    border: 2px solid #a1a1a1;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-family: "LXGW WenKai Mono TC", monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(249, 240, 240);
+    color: black;
+    font-weight: bolder;
+}
+
+.add-task:hover, .inbox-add-project:hover {
+    transform: scale(1.1);
+    background-color: black;
+    color: white;
+    transition: all .2s;
+}
+.task-box {
+    width: 20%;
+    min-height: 50px;
+    height: 75px;
+    border: 2px solid #a1a1a1;
+    background-color: rgb(249, 240, 240);
+    border-radius: 10px;
+}
+.inbox-recent-tasks {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    height: 100%;
+    margin-left: 20px;
+}
+
+.inbox-projects {
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-box {
+    border: 2px solid #a1a1a1;
+    background-color: rgb(249, 240, 240);
+    width: 100%;
+    height: 450px;
+    border-radius: 20px;
+    max-width: 300px;
+}
+
+.inbox-project-container {
+    display: flex;
+    gap: 20px;
+    column-gap: 30px;
+    margin-left: 20px;
+}
+
+.inbox-add-project {
+    border: 2px solid #a1a1a1;
+    width: 200px;
+    height: 200px;
+    justify-self: center;
+    align-self: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: "LXGW WenKai Mono TC", monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(249, 240, 240);
+    color: black;
+}
+
+.task-box:hover, .project-box:hover {
+    transform: scale(1.08);
+    transition: all .5s;
+}
+
+.inbox-weekly {
+    height: 750px;
+    width: 105%;
+    display: flex;
+    flex-direction: column;
+}
+
+.weekly-container {
+    height: 90%;
+    width: 98%;
+    margin: auto;
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.day-box {
+    border: 2px solid #a1a1a1;
+    height: 100%;
+    width: 100%;
+    border: 2px solid #a1a1a1;
+    display: flex;
+    flex-direction: column;
+    min-height: 450px;
+    background-color: rgb(249, 240, 240);
+}
+
+.day-header {
+    border-bottom: 2px solid #a1a1a1;
+    height: 50px;
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: bold;
+    font-family: "LXGW WenKai Mono TC", monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.day-header h1 {
+    margin-top: 5px;
+}
+
+
